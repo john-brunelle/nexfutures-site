@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — NexFutures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --text-primary: #f0f0f5;
+            --text-secondary: #9898a8;
+            --text-muted: #6a6a7a;
+            --accent: #4a9eff;
+            --border: rgba(255,255,255,0.06);
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-secondary);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(10,10,15,0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); text-decoration: none; }
+        .nav-logo span { color: var(--accent); }
+        .nav-back { color: var(--accent); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        .nav-back:hover { text-decoration: underline; }
+        .content { padding: 120px 0 80px; }
+        h1 { color: var(--text-primary); font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+        .effective-date { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 48px; }
+        h2 { color: var(--text-primary); font-size: 1.2rem; font-weight: 600; margin-top: 40px; margin-bottom: 16px; }
+        p { margin-bottom: 16px; }
+        ul { margin: 0 0 16px 24px; }
+        li { margin-bottom: 8px; }
+        a { color: var(--accent); }
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 24px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">Nex<span>Futures</span></a>
+            <a href="/" class="nav-back">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p class="effective-date">Effective date: March 29, 2026</p>
+
+            <p>By downloading, installing, or using NexFutures ("the app"), you agree to these Terms of Service. If you do not agree, do not use the app.</p>
+
+            <h2>1. Description of Service</h2>
+            <p>NexFutures is a mobile application for iOS that allows users to build and deploy automated futures trading strategies ("bots"), view real-time market data, and manage positions through a connected Tradovate brokerage account. The app also provides optional AI-powered features through Anthropic's Claude API.</p>
+
+            <h2>2. Not Financial Advice</h2>
+            <p>NexFutures is a strategy tool. Nothing in the app constitutes financial advice, investment advice, trading advice, or any other type of advice. We do not recommend any specific trades, strategies, or financial products. All trading decisions are made by you or by automated bots that you configure. You are solely responsible for your trading activity and its outcomes.</p>
+
+            <h2>3. Trading Risk</h2>
+            <p>Trading futures involves substantial risk of loss and is not suitable for all investors. You can lose more than your initial investment. Past performance of any strategy, bot, or indicator is not indicative of future results. You should only trade with money you can afford to lose. By using NexFutures, you acknowledge that you understand these risks and accept full responsibility for your trading decisions.</p>
+
+            <h2>4. AI-Powered Features</h2>
+            <p>NexFutures integrates with Anthropic's Claude AI to provide optional strategy insights and analysis. AI-generated output is not financial advice and may be inaccurate, incomplete, or unsuitable for your situation. You should not rely solely on AI output for trading decisions. AI features require data to be sent from your device directly to Anthropic's servers, subject to <a href="https://www.anthropic.com/policies/terms" target="_blank">Anthropic's Terms of Service</a>. NexFutures is not responsible for the accuracy, availability, or performance of third-party AI services.</p>
+
+            <h2>5. Broker Integration</h2>
+            <p>NexFutures connects to your Tradovate brokerage account via OAuth 2.0. Your relationship with Tradovate is governed by Tradovate's own terms and agreements. NexFutures is not a broker, dealer, or financial institution. We do not hold funds, execute trades on our own behalf, or have access to your broker account credentials. The app transmits orders to Tradovate on your behalf based on the bots and strategies you configure.</p>
+
+            <h2>6. Prop Firm Compatibility</h2>
+            <p>NexFutures may be compatible with certain prop firm evaluation accounts that operate through the Tradovate platform. However, not all prop firms permit automated trading. It is your responsibility to verify that your use of NexFutures complies with your prop firm's rules and terms of service. We are not liable for any violations of prop firm rules resulting from your use of the app.</p>
+
+            <h2>7. Automated Trading Disclaimer</h2>
+            <p>Automated trading bots execute trades based on the rules and parameters you define. Bots may malfunction, execute unintended trades, or behave unexpectedly due to market conditions, connectivity issues, API limitations, or software bugs. You are responsible for monitoring your bots and positions. NexFutures is not liable for losses resulting from automated trading, whether caused by user error, software defects, network interruptions, or any other reason.</p>
+
+            <h2>8. Availability and Reliability</h2>
+            <p>We do not guarantee uninterrupted or error-free operation of the app. Market data, order execution, and other features depend on third-party services (Tradovate, Anthropic, Firebase) that may experience downtime or degraded performance. We are not responsible for losses caused by service interruptions from any party.</p>
+
+            <h2>9. User Responsibilities</h2>
+            <p>You agree to use the app in compliance with all applicable laws and regulations. You are responsible for maintaining the security of your device and broker credentials. You must be at least 18 years old to use NexFutures. You agree not to reverse engineer, decompile, or otherwise attempt to extract the source code of the app.</p>
+
+            <h2>10. Intellectual Property</h2>
+            <p>NexFutures, its design, code, and branding are the property of NexFutures and are protected by applicable intellectual property laws. You are granted a limited, non-exclusive, non-transferable license to use the app for personal, non-commercial purposes.</p>
+
+            <h2>11. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, NexFutures and its developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, trading losses, data loss, or any other damages arising from your use of the app. Our total liability for any claim shall not exceed the amount you paid for the app.</p>
+
+            <h2>12. Indemnification</h2>
+            <p>You agree to indemnify and hold harmless NexFutures and its developer from any claims, damages, or expenses arising from your use of the app, your trading activity, or your violation of these terms.</p>
+
+            <h2>13. Changes to These Terms</h2>
+            <p>We may update these terms from time to time. Changes will be posted on this page with an updated effective date. Continued use of the app after changes constitutes acceptance of the revised terms.</p>
+
+            <h2>14. Governing Law</h2>
+            <p>These terms are governed by the laws of the United States. Any disputes shall be resolved in the courts of the state in which the developer resides.</p>
+
+            <h2>15. Contact</h2>
+            <p>If you have questions about these terms, contact us at <a href="mailto:john.brunelle@nexfutures.app">john.brunelle@nexfutures.app</a>.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 NexFutures. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

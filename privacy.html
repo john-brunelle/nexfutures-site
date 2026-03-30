@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — NexFutures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --text-primary: #f0f0f5;
+            --text-secondary: #9898a8;
+            --text-muted: #6a6a7a;
+            --accent: #4a9eff;
+            --border: rgba(255,255,255,0.06);
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-secondary);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(10,10,15,0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); text-decoration: none; }
+        .nav-logo span { color: var(--accent); }
+        .nav-back { color: var(--accent); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        .nav-back:hover { text-decoration: underline; }
+        .content { padding: 120px 0 80px; }
+        h1 { color: var(--text-primary); font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+        .effective-date { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 48px; }
+        h2 { color: var(--text-primary); font-size: 1.2rem; font-weight: 600; margin-top: 40px; margin-bottom: 16px; }
+        p { margin-bottom: 16px; }
+        ul { margin: 0 0 16px 24px; }
+        li { margin-bottom: 8px; }
+        a { color: var(--accent); }
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 24px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">Nex<span>Futures</span></a>
+            <a href="/" class="nav-back">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p class="effective-date">Effective date: March 29, 2026</p>
+
+            <p>NexFutures ("we," "our," or "the app") is committed to protecting your privacy. This policy explains what data the app accesses, how it is handled, and your rights as a user.</p>
+
+            <h2>1. Data That Stays on Your Device</h2>
+            <p>NexFutures is designed with a local-first architecture. Your trading bots, custom indicators, strategy configurations, and account credentials are stored locally on your device using Apple's SwiftData framework. We do not operate servers that store your personal data or trading information.</p>
+
+            <h2>2. Broker Connection (Tradovate)</h2>
+            <p>When you connect your Tradovate account, authentication is handled directly between your device and Tradovate's servers using OAuth 2.0. Your broker credentials are never transmitted to or stored by NexFutures. Access tokens are stored securely in the iOS Keychain on your device.</p>
+
+            <h2>3. AI Features (Claude API)</h2>
+            <p>NexFutures offers optional AI-powered features using Anthropic's Claude API. When you use these features, data you provide (such as strategy parameters or market context) is sent directly from your device to Anthropic's servers. This data is governed by <a href="https://www.anthropic.com/privacy" target="_blank">Anthropic's Privacy Policy</a>. NexFutures does not route, store, or have access to your AI interactions — the communication is between your device and Anthropic.</p>
+
+            <h2>4. Analytics (Firebase)</h2>
+            <p>We use Google Firebase to collect anonymous usage analytics such as app opens, feature usage, and crash reports. This helps us improve the app experience. Firebase may collect device identifiers, general location (country/region), and app interaction data. No personally identifiable trading data is sent to Firebase. You can learn more about Google's data practices at <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a>.</p>
+
+            <h2>5. Email Notifications</h2>
+            <p>If you sign up for launch notifications on our website, we collect your email address solely for the purpose of notifying you when NexFutures is available. We will not share your email with third parties or use it for unrelated marketing.</p>
+
+            <h2>6. Data We Do Not Collect</h2>
+            <p>NexFutures does not collect, transmit, or store your trading history or positions, broker account balances or financial information, strategy performance or profit/loss data, or personal identification documents. All of this data remains on your device or with your broker.</p>
+
+            <h2>7. Third-Party Services</h2>
+            <p>The app interacts with the following third-party services, each governed by their own privacy policies:</p>
+            <ul>
+                <li><strong>Tradovate</strong> — broker connectivity and market data</li>
+                <li><strong>Anthropic (Claude)</strong> — AI-powered strategy features</li>
+                <li><strong>Google Firebase</strong> — anonymous analytics and crash reporting</li>
+            </ul>
+
+            <h2>8. Data Security</h2>
+            <p>Sensitive data such as authentication tokens is stored in the iOS Keychain, which is encrypted at the hardware level. All network communication uses TLS encryption. Since the app does not maintain backend servers with user data, the attack surface for data breaches is significantly reduced.</p>
+
+            <h2>9. Children's Privacy</h2>
+            <p>NexFutures is not intended for use by anyone under the age of 18. We do not knowingly collect information from minors.</p>
+
+            <h2>10. Changes to This Policy</h2>
+            <p>We may update this policy from time to time. Changes will be posted on this page with an updated effective date. Continued use of the app after changes constitutes acceptance of the revised policy.</p>
+
+            <h2>11. Contact</h2>
+            <p>If you have questions about this privacy policy, contact us at <a href="mailto:john.brunelle@nexfutures.app">john.brunelle@nexfutures.app</a>.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 NexFutures. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
