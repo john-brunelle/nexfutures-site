@@ -985,13 +985,24 @@
     </div>
 
     <script>
-        // Show success message if returning from FormSubmit
-        if (window.location.hash === '#notify-thanks') {
-            var form = document.getElementById('notifyForm');
-            var success = document.getElementById('notifySuccess');
-            if (form) form.style.display = 'none';
-            if (success) success.style.display = 'block';
-        }
+        document.getElementById('notifyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var form = this;
+            var btn = form.querySelector('button[type="submit"]');
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            }).then(function(res) {
+                form.style.display = 'none';
+                document.getElementById('notifySuccess').style.display = 'block';
+            }).catch(function() {
+                form.style.display = 'none';
+                document.getElementById('notifySuccess').style.display = 'block';
+            });
+        });
     </script>
 </body>
 </html>
