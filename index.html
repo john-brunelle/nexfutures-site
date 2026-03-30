@@ -577,6 +577,53 @@
             margin-right: auto;
         }
 
+        /* ── Notify Form ── */
+        .notify-form {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .notify-input-group {
+            display: flex;
+            gap: 12px;
+            align-items: stretch;
+        }
+
+        .notify-input-group input {
+            flex: 1;
+            padding: 14px 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .notify-input-group input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .notify-input-group input:focus {
+            border-color: var(--accent);
+        }
+
+        .notify-input-group .btn-primary {
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 480px) {
+            .notify-input-group {
+                flex-direction: column;
+            }
+            .notify-input-group .btn-primary {
+                justify-content: center;
+            }
+        }
+
         /* ── Footer ── */
         footer {
             padding: 48px 0;
@@ -662,7 +709,7 @@
                 <li><a href="#screenshots">Screenshots</a></li>
                 <li><a href="#tutorials">Tutorials</a></li>
             </ul>
-            <a href="#download" class="nav-cta">Download</a>
+            <a href="#notify" class="nav-cta">Get Notified</a>
             <button class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -674,22 +721,22 @@
         <div class="container">
             <div class="hero-badge">
                 <span class="dot"></span>
-                Now available for iOS
+                Coming Soon to iOS
             </div>
             <h1>
                 <span class="gradient">Automate</span> Your<br>Futures Trading Edge
             </h1>
             <p>
-                Build custom trading bots, deploy real-time strategies, and manage your futures positions — all from your iPhone.
+                Build AI-powered trading bots, deploy real-time strategies, and manage your futures positions — all from your iPhone.
             </p>
             <div class="hero-buttons">
-                <a href="#download" class="btn-primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-                    Download on the App Store
+                <a href="#notify" class="btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                    Get Notified at Launch
                 </a>
-                <a href="#tutorials" class="btn-secondary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor" stroke="none"/></svg>
-                    Watch Tutorials
+                <a href="#features" class="btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                    See What's Coming
                 </a>
             </div>
         </div>
@@ -716,13 +763,13 @@
             <div class="section-label">Features</div>
             <h2 class="section-title">Everything you need to<br>trade futures smarter</h2>
             <p class="section-subtitle">
-                NexFutures gives you institutional-grade tools in a mobile-first package. Build, test, and deploy — right from your pocket.
+                NexFutures combines Claude AI with institutional-grade trading tools in a mobile-first package. Build, test, and deploy — right from your pocket.
             </p>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon blue">&#9881;</div>
-                    <h3>Custom Trading Bots</h3>
-                    <p>Configure automated strategies with your own indicators, entry rules, and risk parameters. Deploy bots that trade while you sleep.</p>
+                    <h3>AI-Powered Trading Bots</h3>
+                    <p>Build bots powered by Claude AI — choose from Haiku for speed, Sonnet for balance, or Opus for deep analysis. Combine AI insights with your own indicators and risk parameters.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon green">&#9889;</div>
@@ -741,8 +788,8 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon blue">&#128279;</div>
-                    <h3>Multi-Broker Support</h3>
-                    <p>Connect your Tradovate account with one tap via OAuth. Support for personal accounts and prop firm evaluations.</p>
+                    <h3>Tradovate Integration</h3>
+                    <p>Connect your Tradovate account with one tap via secure OAuth. Works with personal accounts and compatible prop firm evaluations.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon green">&#128241;</div>
@@ -757,7 +804,7 @@
     <section class="how-it-works" id="how-it-works">
         <div class="container">
             <div class="section-label">How It Works</div>
-            <h2 class="section-title">From download to live<br>trading in minutes</h2>
+            <h2 class="section-title">From setup to live<br>trading in minutes</h2>
             <p class="section-subtitle">
                 No complex setup. No desktop required. Connect, configure, and start trading.
             </p>
@@ -770,7 +817,7 @@
                 <div class="step">
                     <div class="step-number">2</div>
                     <h3>Build Your Strategy</h3>
-                    <p>Configure indicators, set entry and exit rules, define risk parameters, and create your trading bot.</p>
+                    <p>Configure indicators, set entry and exit rules, and let Claude AI help refine your approach — or go fully manual. Your call.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
@@ -876,31 +923,40 @@
     <!-- Supported Brokers -->
     <section class="brokers">
         <div class="container" style="text-align: center;">
-            <div class="section-label">Supported Brokers</div>
+            <div class="section-label">Supported Broker</div>
             <h2 class="section-title">Connect with one tap</h2>
             <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
-                Secure OAuth login — your credentials stay with your broker, never with us.
+                Secure OAuth login via Tradovate — your credentials stay with your broker, never with us. Compatible with many Tradovate-powered prop firms.
             </p>
             <div class="brokers-row">
                 <div class="broker-badge">Tradovate</div>
-                <div class="broker-badge" style="opacity: 0.5;">More coming soon</div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta" id="download">
+    <!-- CTA / Notify -->
+    <section class="cta" id="notify">
         <div class="container">
-            <h2>Ready to automate<br>your edge?</h2>
-            <p>Download NexFutures and start building strategies that trade for you.</p>
-            <div class="hero-buttons">
-                <a href="#" class="btn-primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-                    Download on the App Store
-                </a>
-            </div>
+            <h2>Be the first to<br>automate your edge</h2>
+            <p>NexFutures is launching soon. Drop your email and we'll let you know the moment it hits the App Store.</p>
+            <form class="notify-form" id="notifyForm" action="https://formsubmit.co/notify@nexfutures.app" method="POST">
+                <input type="hidden" name="_subject" value="NexFutures - New Launch Notification Signup">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://nexfutures.app#notify-thanks">
+                <input type="text" name="_honey" style="display:none">
+                <div class="notify-input-group">
+                    <input type="email" name="email" id="notifyEmail" placeholder="you@email.com" required aria-label="Email address">
+                    <button type="submit" class="btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                        Notify Me
+                    </button>
+                </div>
+            </form>
+            <p id="notifySuccess" style="display:none; margin-top: 16px; font-size: 0.95rem; color: var(--accent-green);">
+                You're on the list! We'll email you at launch.
+            </p>
             <p style="margin-top: 16px; font-size: 0.85rem; color: var(--text-muted);">
-                Requires iOS 17.0 or later. Free to download.
+                Requires iOS 17.0 or later. Free to download. No spam, just the launch announcement.
             </p>
         </div>
     </section>
@@ -913,7 +969,7 @@
                     &copy; 2026 NexFutures. All rights reserved.
                 </div>
                 <ul class="footer-links">
-                    <li><a href="mailto:support@nexfutures.app">Contact</a></li>
+                    <li><a href="mailto:john.brunelle@nexfutures.app">Contact</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Terms of Service</a></li>
                 </ul>
@@ -928,5 +984,14 @@
         </p>
     </div>
 
+    <script>
+        // Show success message if returning from FormSubmit
+        if (window.location.hash === '#notify-thanks') {
+            var form = document.getElementById('notifyForm');
+            var success = document.getElementById('notifySuccess');
+            if (form) form.style.display = 'none';
+            if (success) success.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
