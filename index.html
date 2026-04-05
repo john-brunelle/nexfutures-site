@@ -9,6 +9,10 @@
     <meta property="og:description" content="Next-generation automated futures trading for iOS.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nexfutures.app">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -74,13 +78,14 @@
         }
 
         .nav-logo {
-            font-size: 1.25rem;
-            font-weight: 800;
-            color: var(--text-primary);
-            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
         }
 
-        .nav-logo span { color: var(--accent); }
+        .nav-logo img {
+            height: 36px;
+            width: auto;
+        }
 
         .nav-links {
             display: flex;
@@ -731,7 +736,7 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="nav-logo">Nex<span>Futures</span></div>
+            <a href="/" class="nav-logo"><img src="images/nexfutures_logo_nav.png" alt="NexFutures" height="36"></a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
